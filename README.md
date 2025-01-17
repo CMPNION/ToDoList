@@ -22,6 +22,8 @@
 
 
 ### How to startup project?
-''' pip install fastapi, sqlalchemy, passlib '''
-''' git clone https://github.com/CMPNION/ToDoList/ '''
-''' uvicorn app.main:app --reload '''
+```
+pip install fastapi, sqlalchemy, passlib
+git clone https://github.com/CMPNION/ToDoList/
+uvicorn app.main:app --reload
+```
