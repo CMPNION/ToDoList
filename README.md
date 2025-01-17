@@ -1,9 +1,7 @@
 # ToDoList
 ## This project have been written for "Intoduce to programming 2" course.
 ## Project participants:
-## Norkin Dmitriy SE-2422
-## Aiym Pangerey SE-2422
-## Nazerke Abzhamal SE-2422
+## Norkin Dmitriy SE-2422<br/>Aiym Pangerey SE-2422<br/>Nazerke Abzhamal SE-2422
 ### Frameworks and libraries used in this project:
 > Fast api ***Server Part***
 
