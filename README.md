@@ -19,3 +19,9 @@
 
 ### Scheme of this API:
 <img width="780" alt="Снимок экрана 2025-01-17 в 12 05 45" src="https://github.com/user-attachments/assets/3e2c3c24-d791-4427-8059-c74cb2c10c11" />
+
+
+### How to startup project?
+''' pip install fastapi, sqlalchemy, passlib '''
+''' git clone https://github.com/CMPNION/ToDoList/ '''
+''' uvicorn app.main:app --reload '''
