@@ -3,11 +3,11 @@ from fastapi.responses import HTMLResponse, RedirectResponse #responses from htm
 from fastapi.templating import Jinja2Templates #to work in html
 from sqlalchemy.orm import Session #whoisuser?
 from passlib.context import CryptContext #password hashing
-from . import models, database #models and database
-from app.database import Base, engine #database and engine
+import models, database
+from database import Base, engine #database and engine
 
 app = FastAPI() #instance of application
-templates = Jinja2Templates(directory="app/templates") #html (static)) files
+templates = Jinja2Templates(directory="./templates") #html (static)) files
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto") #crypt password
 Base.metadata.create_all(bind=engine) #create tables
 
@@ -46,7 +46,7 @@ async def register_post(
     db.commit()
     db.refresh(db_user) #push and save user to db
 
-    return RedirectResponse(url="/login", status_code=status.HTTP_303_SEE_OTHER) #redirect to login 
+    return RedirectResponse(url="/login", status_code=status.HTTP_200_OK) #redirect to login
 
 #setting up login page
 @app.get("/login", response_class=HTMLResponse)
@@ -111,7 +111,7 @@ async def create_todo(
     if not user:
         return RedirectResponse(url="/login", status_code=status.HTTP_303_SEE_OTHER)
 
-    new_todo = models.Todo(task=task, owner_id=user.id)
+    new_todo = models.Todo(task=task, owner_id = user.id)
     db.add(new_todo)
     db.commit()
     return RedirectResponse(url="/todos", status_code=status.HTTP_303_SEE_OTHER)

@@ -1,7 +1,7 @@
 from sqlalchemy import Column, Integer, String, Boolean
 from sqlalchemy.orm import relationship
 from sqlalchemy import ForeignKey
-from .database import Base
+from database import Base
 
 
 # Define the User and Todo models
