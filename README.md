@@ -4,7 +4,10 @@ This is a simple Todo List application built with FastAPI and SQLAlchemy. The ap
 
 ## Project Structure
 
+![_](https://github.com/user-attachments/assets/d8a888f8-a998-4084-8652-69b7b03db37d)
+
 ## Installation
+
 
 1. Clone the repository:
     ```sh
